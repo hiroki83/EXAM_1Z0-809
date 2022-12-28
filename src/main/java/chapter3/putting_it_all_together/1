@@ -2,7 +2,7 @@ package chapter3.putting_it_all_togher;
 
 import java.util.*;
 
-public class TestClass {
+public class chapter5.resource_bundle.TestClass3 {
   List<?> list1 = new ArrayList<A>();
   List<? extends A> list2 = new ArrayList<A>();
   List<? super A> list3 = new ArrayList<A>();
