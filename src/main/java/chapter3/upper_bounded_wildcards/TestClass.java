@@ -9,6 +9,10 @@ public class TestClass {
     test.add(10L);
     test.add(100L);
     System.out.println(total(test));
+    ArrayList<Number> test2 = new ArrayList<>();
+    test2.add(10);
+    test2.add(100);
+    System.out.println(total(test2));
   }
 
   public static long total(List<?extends Number>list) {

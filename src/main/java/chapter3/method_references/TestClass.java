@@ -13,6 +13,10 @@ public class TestClass {
     String str = "abc";
     Predicate<String> methodRef2 = str::startsWith;
     Predicate<String> lambda2 = s -> str.startsWith(s);
+
+    //Predicate<String> methodRef2_1 = String::startsWith;//DOES NOT COMPILE
+    Predicate<String> lambda2_1 = s -> str.startsWith(s);
+
     Predicate<String> methodRef3 = String::isEmpty;
     Predicate<String> lambda3 = s -> s.isEmpty();
     Supplier<ArrayList> methodRef4 = ArrayList::new;

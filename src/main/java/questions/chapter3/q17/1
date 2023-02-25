@@ -1,0 +1,6 @@
+package questions.chapter3.q17;
+
+public class Generic3<?> {
+  public static void main(String[] args) {
+  }
+}
