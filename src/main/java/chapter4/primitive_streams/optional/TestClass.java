@@ -20,6 +20,8 @@ public class TestClass {
     System.out.println(sum);
 
     DoubleStream doubles = DoubleStream.generate(() -> Math.PI);
-    OptionalDouble min = doubles.min();// runs infinitely
+    //OptionalDouble min = doubles.min();// runs infinitely
+    OptionalDouble min = doubles.limit(100).min();// runs infinitely
+    System.out.println(min.getAsDouble());
   }
 }
