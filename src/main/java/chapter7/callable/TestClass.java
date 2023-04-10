@@ -14,7 +14,7 @@ public class TestClass {
     try {
       service = Executors.newSingleThreadExecutor();
       service.submit(() -> {Thread.sleep(1000); return null;});
-      Future<Integer> result = service.submit(() -> {return test("hiroki");});
+      Future<Integer> result = service.submit(() -> {return test("123445566");});
       System.out.println(result.get());
       //service.submit(() -> {Thread.sleep(1000);});// DOES NOT COMPILE
     } finally {
