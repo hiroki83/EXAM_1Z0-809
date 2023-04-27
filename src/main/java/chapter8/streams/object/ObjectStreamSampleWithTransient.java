@@ -40,8 +40,8 @@ public class ObjectStreamSampleWithTransient {
 
   public static void main(String[] args) throws IOException, ClassNotFoundException {
     List<AnimalWithTransient> animals = new ArrayList<AnimalWithTransient>();
-    animals.add(new AnimalWithTransient("Tommy Tiger", 5,'T'));
     animals.add(new AnimalWithTransient("Peter Penguin", 8,'P'));
+    animals.add(new AnimalWithTransient("Tommy Tiger", 5,'T'));
 
     File dataFile = new File(parent, "animal.data");
     createAnimalsFile(animals,dataFile);

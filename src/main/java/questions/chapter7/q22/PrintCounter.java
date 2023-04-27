@@ -14,8 +14,8 @@ public class PrintCounter {
     ExecutorService service = Executors.newSingleThreadExecutor();
     List<Future<?>> results = new ArrayList<>();
     IntStream.iterate(0,i -> i+1).limit(5).forEach(
-      i -> results.add(service.execute(() -> {counter++;})) // n1
-      //i -> results.add(service.submit(() -> counter++)) // n1
+      //i -> results.add(service.execute(() -> {counter++;})) // n1
+      i -> results.add(service.submit(() -> counter++)) // n1
     );
     for(Future<?> result : results) {
       System.out.print(result.get()+" "); // n2

@@ -9,7 +9,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 
-public class TestClass {
+public class CopyBufferFileSample {
   private static final String parent = "//Users//hirokiinoue//Practice1Z0809//src//main//resources//chapter8//streams//buffered//";
 
   public static void copy(File source, File destination) throws IOException {

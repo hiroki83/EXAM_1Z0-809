@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class TestClass {
+public class CopyFileSample {
   private static final String parent = "//Users//hirokiinoue//Practice1Z0809//src//main//resources//chapter8//streams//file//";
 
   public static void copy(File source, File destination) throws IOException {
