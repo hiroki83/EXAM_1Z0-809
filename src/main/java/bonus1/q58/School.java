@@ -10,4 +10,9 @@ public class School {
   public School() {
     exceptions = new LinkedList<>();
   }
+  public static void main(String ... args) {
+    School school = new School();
+    school.exceptions.add("");
+    //school.names.add(new Object());//COMPILE ERROR
+  }
 }
