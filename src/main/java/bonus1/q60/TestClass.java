@@ -20,8 +20,17 @@ public class TestClass {
         synchronized (o1) { System.out.println("Hound");} // g2
       }
     });
-    f1.get();
-    f2.get();
+    Future<?> f3 = service.submit(() -> {return;});
+    service.execute(() -> {return;});
+//    f1.get();
+//    f2.get();
+    Thread.sleep(1);
+    System.out.println(f1.isDone());
+    System.out.println(f2.isDone());
+    System.out.println(f3.isDone());
+    System.out.println(f1.get());
+    System.out.println(f2.get());
+    System.out.println(f3.get());
     if(service != null) service.shutdown();
   }
 }
