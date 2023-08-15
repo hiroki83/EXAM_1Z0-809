@@ -1,0 +1,18 @@
+package reading3rd.chapter4.intermediateoperations_p196.sorted;
+
+import java.util.stream.Stream;
+import java.util.Comparator;
+
+public class TestClass {
+  public static void main(String ... args) {
+    Stream<String> s = Stream.of("brown-", "bear-");
+    s.sorted().forEach(System.out::println);
+
+
+    Stream<String> s1 = Stream.of("brown bear-", "grizzly-");
+    s1.sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+    Stream<String> s2 = Stream.of("brown bear-", "grizzly-");
+    //s2.sorted(Comparator::reverseOrder).forEach(System.out::println);// DOES NOT COMPILE
+  }
+}
