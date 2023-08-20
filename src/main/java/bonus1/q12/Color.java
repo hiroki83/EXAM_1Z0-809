@@ -7,5 +7,9 @@ public class Color {
   }
   public static void main(String ... args) {
     //System.out.println(new Shade().hue);// DOES NOT COMPILE
+    System.out.println(new Color().new Shade().hue);
+  }
+  public void call() {
+    Shade shade = new Shade();
   }
 }
