@@ -14,7 +14,7 @@ public class TestClass {
 
     LocalDate date = LocalDate.of(2015,Month.JUNE,20);
     LocalTime time1 = LocalTime.of(7,50);
-    LocalTime time2 = LocalTime.of(6,50);
+    LocalTime time2 = LocalTime.of(6,50,1,1);
 
     DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss z");
     DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
@@ -30,5 +30,10 @@ public class TestClass {
     System.out.println(formatter3.format(paris));
     System.out.println(formatter4.format(paris));
     System.out.println(formatter5.format(paris));
+    System.out.println(time2);
+      
+    ZoneId.getAvailableZoneIds().stream()
+      .filter(z -> z.contains("JP") || z.contains("Japan"))
+      .sorted().forEach(System.out::println);
   }
 }
