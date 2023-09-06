@@ -2,6 +2,8 @@ package examtopics.q15;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class TestClass {
   public static void main(String ... args) {
@@ -13,5 +15,7 @@ public class TestClass {
     System.out.println(Country.Continent.ASIA.ordinal());
     System.out.println(Country.Continent.EUROPE.ordinal());
     System.out.println(Country.Continent.AFRICA.ordinal());
+    Supplier<String> s = String::new;
+    Function<String, Integer> f = ss -> ss.length();
   }
 }

@@ -41,7 +41,8 @@ public class Country {
       new Country("Italy", Country.Continent.EUROPE),
       new Country("Germany", Country.Continent.EUROPE)); // {EUROPE=[Italy, Germany], ASIA=[Japan]}
     Map<Country.Continent, List<String>> regionNames = couList.stream()
-      .collect(Collectors.groupingBy(Country::getRegion,
+    //  .collect(Collectors.groupingBy(Country::getRegion,
+      .collect(Collectors.groupingBy(x -> x.getRegion(),
          Collectors.mapping(Country::getName, Collectors.toList())
     //Map<Country.Continent, List<Country>> regionNames = couList.stream()
     //  .collect(Collectors.groupingBy(Country::getRegion
